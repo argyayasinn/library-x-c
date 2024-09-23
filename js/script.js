@@ -13,3 +13,15 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+// Parallax Effect
+
+let text1 = document.getElementById("text1");
+let scrolldown = document.getElementById("scrolldown");
+
+window.addEventListener("scroll", () => {
+  let value = window.scrollY;
+
+  text1.style.marginTop = value * -1 + "px";
+  scrolldown.style.left = value * 0.25 + "px";
+});
